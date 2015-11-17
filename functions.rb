@@ -1,6 +1,11 @@
 # Return a reversed copy of the array
 def reverse(an_array)
   # TODO write your code here
+  reversedArray = Array.new
+  an_array.each do |arrayElement|
+    reversedArray.unshift arrayElement
+  end
+  an_array = reversedArray
 end
 
 # Return a map of letters and counts of letters
@@ -31,7 +36,7 @@ end
 
 # Uncomment a line to test the function you are developing
 # Type "ruby functions.rb" at command line (Konsole) to run the script
-# puts reverse([3,6,'dog']).inspect
+ puts reverse([3,6,'dog']).inspect
 # puts histogram('The Quick brown fox').inspect
 # puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
 # puts fizzbuzz.join("\n")
