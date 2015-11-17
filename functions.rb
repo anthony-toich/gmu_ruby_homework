@@ -13,6 +13,11 @@ end
 # For example, histogram('Hello') returns {'h'=>1,'e'=>1,'l'=>2,'o'=>1}
 def histogram(a_string)
   # TODO write your code here
+  frequencies = Hash.new(0)
+  letters = a_string.split("")
+  letters.each{|letter| frequencies[letter]+=1}
+  frequencies = frequencies.sort_by{|a,b|b}
+  frequencies.reverse!
 end
 
 # Sum all the numbers in the array
@@ -36,7 +41,7 @@ end
 
 # Uncomment a line to test the function you are developing
 # Type "ruby functions.rb" at command line (Konsole) to run the script
- puts reverse([3,6,'dog']).inspect
-# puts histogram('The Quick brown fox').inspect
+# puts reverse([3,6,'dog']).inspect
+puts histogram('The Quick brown fox').inspect
 # puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
 # puts fizzbuzz.join("\n")
