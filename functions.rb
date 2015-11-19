@@ -44,11 +44,27 @@ end
 # For example [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', ..., 14, 'FizzBuzz', ...]
 def fizzbuzz
   # TODO write your code here
+  fbArray = Array.new
+  i = 1
+  #fbArray[0] = 0
+  while i <= 100 do
+    if i % 15 == 0
+      fbArray[i] = "FizzBuzz"
+    elsif i % 3 == 0
+      fbArray[i] = "Fizz"
+    elsif i % 5 == 0
+      fbArray[i] = "Buzz"
+    else
+      fbArray[i] = i
+    end
+    i += 1
+  end
+  fizzbuzz = fbArray
 end
 
 # Uncomment a line to test the function you are developing
 # Type "ruby functions.rb" at command line (Konsole) to run the script
 # puts reverse([3,6,'dog']).inspect
 #puts histogram('The Quick brown fox').inspect
-# puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
-# puts fizzbuzz.join("\n")
+#puts sum_only_numbers [4, 'foo', [ ], 27, :rain, 3.14]
+#puts fizzbuzz.join("\n")
